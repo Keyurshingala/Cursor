@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:paddingStart="@dimen/_8sdp"
+    android:paddingEnd="@dimen/_8sdp">
+
+    <ImageView
+        android:id="@+id/ivUser"
+        android:layout_width="@dimen/_32sdp"
+        android:layout_height="@dimen/_32sdp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_user" />
+
+    <LinearLayout
+        android:layout_toStartOf="@id/tvInvite"
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_toEndOf="@id/ivUser"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:fontFamily="@font/ns_bold"
+            android:text="-"
+            android:lines="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:lines="1"
+            android:ellipsize="end"
+            android:ems="2"
+            android:id="@+id/tvNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ns_regular"
+            android:text="-"
+            android:textColor="#4d4d4d"
+            android:textSize="@dimen/_12sdp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvInvite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_green_border_only"
+        android:fontFamily="@font/ns_regular"
+        android:paddingStart="@dimen/_16sdp"
+        android:paddingEnd="@dimen/_16sdp"
+        android:text="INVITE"
+        android:textColor="@color/green"
+        android:textSize="@dimen/_10sdp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_below="@+id/ll"
+        android:layout_alignStart="@id/ll"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_minus8sdp"
+        android:background="#f5f5f5" />
+</RelativeLayout>

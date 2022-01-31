@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".InvitePhoneContactsActivity">
+
+    <include
+        android:id="@+id/tb"
+        layout="@layout/toolbar" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tb"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:elevation="@dimen/_3sdp"
+        app:endIconMode="clear_text"
+        app:hintEnabled="false"
+        app:startIconDrawable="@drawable/ic_search"
+        app:startIconTint="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ns_regular"
+            android:hint="Search Stocks"
+            android:inputType="textCapWords"
+            android:padding="@dimen/_8sdp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/til"
+        android:fontFamily="@font/ns_regular"
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingTop="@dimen/_6sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        android:paddingBottom="@dimen/_6sdp"
+        android:text="Invite your contacts and earn Cash Bonus"
+        android:textColor="#163f77" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTxt"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"
+        tools:listitem="@layout/rv_contact" />
+
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tvTxt"
+        android:background="@color/white"
+        android:fontFamily="@font/ns_bold"
+        android:gravity="center"
+        android:text="Contact Not Found"
+        android:textSize="@dimen/_24sdp"
+        android:visibility="gone"
+        tools:visibility="gone" />
+
+</RelativeLayout>
